@@ -33,7 +33,7 @@ const FormFooter: React.FC<FormFooterProps> = ({ onReset }) => {
           className="bg-[#a8cc3c] hover:bg-[#95b535] text-white gap-2"
         >
           <FileText size={18} />
-          Gerar PDF para Impressão
+          Gerar PDF
         </Button>
       </div>
     </div>
