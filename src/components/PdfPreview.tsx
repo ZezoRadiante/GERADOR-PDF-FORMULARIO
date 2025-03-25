@@ -39,7 +39,7 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
         {/* Cabeçalho do documento */}
         <DocumentHeader 
           logoSrc="/lovable-uploads/891aa379-bece-4a32-bd58-18611c758b1f.png" 
-          title="FORMULÁRIO SCI -- 234" 
+          title="FORMULÁRIO SCI - 234" 
         />
         
         <table style={{ 
@@ -52,7 +52,7 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
           boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
         }}>
           <tbody>
-            <TableHeader title="MATRIZ DE ANÁLISE DE TRABALHO -- SCI 234" />
+            <TableHeader title="EMERGÊNCIAS CLIMÁTICAS E EPIZOOTIAS - SCI 234" />
             
             <EventDetailsRow 
               eventName={formData.eventName} 
@@ -75,7 +75,7 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
               time={formData.currentTime} 
             />
             
-            <TableHeader title="MATRIZ DE ANÁLISE DE TRABALHO Pág. 1 de 1 SCI 234" />
+            
           </tbody>
         </table>
         
