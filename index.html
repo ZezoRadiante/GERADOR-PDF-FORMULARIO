@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário SCI 234</title>
+    <meta name="description" content="Gerador de Formulário SCI 234" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="Formulário SCI 234" />
+    <meta property="og:description" content="Gerador de Formulário SCI 234" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#a8cc3c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SCI 234" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Scripts para geração de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Installation Prompt Handler -->
+    <script>
+      // Store the install prompt for later use
+      window.deferredPrompt = null;
+      
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later
+        window.deferredPrompt = e;
+        console.log('App can be installed, prompt saved');
+      });
+    </script>
+  </body>
+</html>

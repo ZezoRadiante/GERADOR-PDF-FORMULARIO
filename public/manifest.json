@@ -1,0 +1,18 @@
+
+{
+  "name": "Formulário SCI 234",
+  "short_name": "SCI 234",
+  "description": "Gerador de Formulário SCI 234 para uso online e offline",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a8cc3c",
+  "icons": [
+    {
+      "src": "/lovable-uploads/cd7d2eec-9685-4c6c-9bd8-f0b444b0b886.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
