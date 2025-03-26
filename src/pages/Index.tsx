@@ -14,7 +14,7 @@ export default function Index() {
         <div className="bg-white shadow rounded-lg overflow-hidden relative">
           {/* Marca d'água grande no background */}
           <Watermark 
-            src="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
             opacity={0.08} 
             className="w-4/5 max-w-lg"
           />
@@ -22,7 +22,7 @@ export default function Index() {
           {/* Cabeçalho com logo */}
           <div className="bg-green-50 p-4 border-b border-green-100 flex items-center relative z-10">
             <img 
-              src="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
               alt="Logo" 
               className="h-12 mr-4"
             />
