@@ -9,7 +9,7 @@ import EventDetailsRow from "./pdf/EventDetailsRow";
 import MainContent from "./pdf/MainContent";
 import EmptyRow from "./pdf/EmptyRow";
 import DateRow from "./pdf/DateRow";
-import DocumentFooter from "./pdf/DocumentFooter";
+
 
 interface PdfPreviewProps {
   formData: FormData;
