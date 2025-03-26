@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useState } from "react";
 
 interface WatermarkProps {
   src: string;
@@ -14,6 +13,7 @@ const Watermark: React.FC<WatermarkProps> = ({
   style = {}, 
   className = ""
 }) => {
+    const [imageError, setImageError] = useState(false);
   return (
     <div style={{ 
       position: 'absolute', 
@@ -30,21 +30,24 @@ const Watermark: React.FC<WatermarkProps> = ({
     }}
     className={className}
     >
-      <img 
-        src={src} 
-        style={{ 
-          opacity, 
-          width: '80%', 
-          objectFit: 'contain',
-          ...style
-        }} 
-        alt="Marca d'água"
-               onError={(e) => {
-          console.error("Erro ao carregar marca d'água:", e);
-          // Não mostrar nada em caso de erro na marca d'água
-          e.currentTarget.style.display = 'none';
-        }}
-      />
+      {!imageError && (
+        <img 
+          src={src} 
+          style={{ 
+            opacity, 
+            width: '80%', 
+            objectFit: 'contain',
+            ...style
+          }} 
+          alt="Marca d'água"
+          onError={(e) => {
+            console.error("Erro ao carregar marca d'água:", e);
+            setImageError(true);
+            // Não mostrar nada em caso de erro na marca d'água
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+      )}
     </div>
   );
 };
