@@ -14,7 +14,7 @@ export default function Index() {
         <div className="bg-white shadow rounded-lg overflow-hidden relative">
           {/* Marca d'água grande no background */}
           <Watermark 
-            src="/lovable-uploads/891aa379-bece-4a32-bd58-18611c758b1f.png" 
+            src="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
             opacity={0.08} 
             className="w-4/5 max-w-lg"
           />
@@ -22,7 +22,7 @@ export default function Index() {
           {/* Cabeçalho com logo */}
           <div className="bg-green-50 p-4 border-b border-green-100 flex items-center relative z-10">
             <img 
-              src="/lovable-uploads/891aa379-bece-4a32-bd58-18611c758b1f.png" 
+              src="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
               alt="Logo" 
               className="h-12 mr-4"
             />
@@ -31,7 +31,7 @@ export default function Index() {
                 FORMULÁRIO SCI - 234
               </h1>
               <p className="text-[#95b535] text-sm">
-                Matriz de Análise de Trabalho
+                Emergências climáticas e epizootias
               </p>
             </div>
           </div>
