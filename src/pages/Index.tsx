@@ -10,7 +10,7 @@ export default function Index() {
     const [logoError, setLogoError] = useState(false);
 
   // Use uma URL mais confiável para a logo
-  const logoUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s";
+  const logoUrl = "/logo.png";
     // Imagem de fallback em caso de erro
   const fallbackLogo = "/placeholder.svg";
 
