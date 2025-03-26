@@ -7,8 +7,8 @@ interface DocumentFooterProps {
 }
 
 const DocumentFooter: React.FC<DocumentFooterProps> = ({ 
-  text = "TARJETA DE CAMPO", 
-  subtext = "Frente Verso" 
+  text = "", 
+  subtext = "" 
 }) => {
   return (
     <div style={{ 
@@ -21,7 +21,8 @@ const DocumentFooter: React.FC<DocumentFooterProps> = ({
       zIndex: '1',
       color: '#333333'
     }}>
-      <strong>{text}</strong><br />
+      {text && <strong>{text}</strong>}
+      {text && subtext && <br />}
       {subtext}
     </div>
   );
