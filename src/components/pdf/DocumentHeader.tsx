@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 
 interface DocumentHeaderProps {
   logoSrc: string;
@@ -7,6 +7,7 @@ interface DocumentHeaderProps {
 }
 
 const DocumentHeader: React.FC<DocumentHeaderProps> = ({ logoSrc, title }) => {
+    const [logoError, setLogoError] = useState(false);
   return (
     <div style={{ 
       textAlign: 'center', 
@@ -21,20 +22,31 @@ const DocumentHeader: React.FC<DocumentHeaderProps> = ({ logoSrc, title }) => {
       paddingBottom: '3px'
     }}>
       {/* Logo no canto superior esquerdo */}
-      <img 
-        src={logoSrc} 
-        style={{ 
-          width: '55px', 
-          height: 'auto',
-          marginRight: '8px'
-        }} 
-        alt="Logo"
-                onError={(e) => {
-          console.error("Erro ao carregar logo no PDF:", e);
-          // Fallback para uma imagem local
-          e.currentTarget.src = "/placeholder.svg";
-        }}
-      />
+      {logoError ? (
+        <img 
+          src="/placeholder.svg" 
+          style={{ 
+            width: '55px', 
+            height: 'auto',
+            marginRight: '8px'
+          }} 
+          alt="Logo Fallback"
+        />
+      ) : (
+        <img 
+          src={logoSrc} 
+          style={{ 
+            width: '55px', 
+            height: 'auto',
+            marginRight: '8px'
+          }} 
+          alt="Logo"
+          onError={(e) => {
+            console.error("Erro ao carregar logo no PDF:", e);
+            setLogoError(true);
+          }}
+        />
+      )}
       <strong style={{ 
         flex: '1', 
         textAlign: 'center', 
