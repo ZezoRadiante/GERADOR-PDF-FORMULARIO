@@ -31,14 +31,14 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
       }}>
         {/* Marca d'água grande única */}
         <Watermark 
-          src="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
           opacity={0.08} 
           style={{ width: '80%' }}
         />
         
         {/* Cabeçalho do documento */}
         <DocumentHeader 
-          logoSrc="https://drive.google.com/file/d/1Ge-YoZOOoBlxaqVW0hRvReSidSQxGlqv/view?usp=sharing" 
+          logoSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
           title="FORMULÁRIO SCI - 234" 
         />
         
