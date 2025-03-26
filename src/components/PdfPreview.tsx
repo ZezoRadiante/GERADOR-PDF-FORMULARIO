@@ -81,7 +81,7 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData, logoUrl = "https://en
         </table>
         
         {/* Rodapé */}
-        <DocumentFooter />
+        <DocumentFooter text="" subtext="" />
       </div>
     </div>
   );
