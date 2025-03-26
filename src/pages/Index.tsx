@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import SciForm from "@/components/SciForm";
 import PdfPreview from "@/components/PdfPreview";
 import { useFormData } from "@/hooks/useFormData";
@@ -7,7 +7,12 @@ import Watermark from "@/components/pdf/Watermark";
 
 export default function Index() {
   const { formData, setFormData, resetForm } = useFormData();
+    const [logoError, setLogoError] = useState(false);
+
+  // Use uma URL mais confiável para a logo
   const logoUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s";
+    // Imagem de fallback em caso de erro
+  const fallbackLogo = "/placeholder.svg";
 
 
   return (
@@ -23,15 +28,23 @@ src={logoUrl}
           
           {/* Cabeçalho com logo */}
           <div className="bg-green-50 p-4 border-b border-green-100 flex items-center relative z-10">
-            <img 
-src={logoUrl} 
-              alt="Logo" 
-              className="h-12 mr-4"
-                            onError={(e) => {
-                console.error("Erro ao carregar logo:", e);
-                e.currentTarget.src = "/placeholder.svg"; // Imagem de fallback
-              }}
-            />
+           {logoError ? (
+              <img 
+                src={fallbackLogo} 
+                alt="Logo Fallback" 
+                className="h-12 mr-4"
+              />
+            ) : (
+              <img 
+                src={logoUrl} 
+                alt="Logo" 
+                className="h-12 mr-4"
+                onError={(e) => {
+                  console.error("Erro ao carregar logo:", e);
+                  setLogoError(true);
+                }}
+              />
+            )}
             <div>
               <h1 className="text-2xl font-bold text-[#a8cc3c]">
                 FORMULÁRIO SCI - 234
