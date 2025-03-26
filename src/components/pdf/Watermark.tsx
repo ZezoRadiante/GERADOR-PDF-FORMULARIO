@@ -39,6 +39,11 @@ const Watermark: React.FC<WatermarkProps> = ({
           ...style
         }} 
         alt="Marca d'água"
+               onError={(e) => {
+          console.error("Erro ao carregar marca d'água:", e);
+          // Não mostrar nada em caso de erro na marca d'água
+          e.currentTarget.style.display = 'none';
+        }}
       />
     </div>
   );
