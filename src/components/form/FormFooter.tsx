@@ -12,7 +12,7 @@ const FormFooter: React.FC<FormFooterProps> = ({ onReset }) => {
     <div className="flex flex-col md:flex-row justify-between pt-6 gap-4">
       <div className="flex items-center">
         <img 
-          src="/lovable-uploads/cd7d2eec-9685-4c6c-9bd8-f0b444b0b886.png" 
+          src="logo.png" 
           alt="Logo" 
           className="h-10 mr-2"
         />
