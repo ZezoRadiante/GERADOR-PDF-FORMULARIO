@@ -29,6 +29,11 @@ const DocumentHeader: React.FC<DocumentHeaderProps> = ({ logoSrc, title }) => {
           marginRight: '8px'
         }} 
         alt="Logo"
+                onError={(e) => {
+          console.error("Erro ao carregar logo no PDF:", e);
+          // Fallback para uma imagem local
+          e.currentTarget.src = "/placeholder.svg";
+        }}
       />
       <strong style={{ 
         flex: '1', 
