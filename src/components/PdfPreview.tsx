@@ -13,9 +13,10 @@ import DocumentFooter from "./pdf/DocumentFooter";
 
 interface PdfPreviewProps {
   formData: FormData;
+  logoUrl?: string;
 }
 
-const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
+const PdfPreview: React.FC<PdfPreviewProps> = ({ formData, logoUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" }) => {
   return (
     <div id="pdfPreview" className="hidden">
       <div style={{ 
@@ -31,14 +32,14 @@ const PdfPreview: React.FC<PdfPreviewProps> = ({ formData }) => {
       }}>
         {/* Marca d'água grande única */}
         <Watermark 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
+     src={logoUrl} 
           opacity={0.08} 
           style={{ width: '80%' }}
         />
         
         {/* Cabeçalho do documento */}
         <DocumentHeader 
-          logoSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzJ017VFFl09z6LzBxTtNC6axLwHq6YYK-A&s" 
+   logoSrc={logoUrl}
           title="FORMULÁRIO SCI - 234" 
         />
         
